@@ -1,0 +1,29 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'school/style.css' %}" />
+<a href="{% url 'school:index'%}">Home</a>
+
+<h1>{{ student.firstname }} {{ student.lastname }}</h1>
+<p><strong>Major:</strong> {{ student.major }}</p>
+
+<h2>Enrollments</h2>
+{% if student.enrollment_set.all %}
+<table>
+	<thead>
+		<tr>
+			<th>Class Name</th>
+			<th>Date Joined</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for enrollment in student.enrollment_set.all %}
+		<tr>
+			<td>{{ enrollment.class_obj.name }}</td>
+			<td>{{ enrollment.date_joined }}</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+{% else %}
+<p>Student is not enrolled in any classes.</p>
+{% endif %}
