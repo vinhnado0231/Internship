@@ -1,0 +1,69 @@
+/* polls/style.css */
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+li {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+a {
+	text-decoration: none;
+	color: blue;
+}
+
+/* style.css */
+
+/* Body styles */
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f0f0f0;
+	margin: 20px;
+}
+
+/* Header styles */
+h1 {
+	color: #333;
+}
+
+/* Class information styles */
+p {
+	margin-bottom: 10px;
+}
+
+/* Table styles */
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 20px;
+}
+
+table,
+th,
+td {
+	border: 1px solid #ddd;
+}
+
+th,
+td {
+	padding: 8px;
+	text-align: left;
+}
+
+/* Header row styles */
+thead {
+	background-color: #f2f2f2;
+}
+
+/* Alternate row styles */
+tbody tr:nth-child(even) {
+	background-color: #f9f9f9;
+}
+
+/* Message styles */
+p.message {
+	font-weight: bold;
+	color: #007bff;
+}

@@ -1,0 +1,36 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'school/style.css' %}" />
+
+<h1>{{ class.name }}</h1>
+<p><strong>Start Date:</strong> {{ class.start_date }}</p>
+<p><strong>End Date:</strong> {{ class.end_date }}</p>
+
+<a href="{% url 'school:index'%}">Home</a>
+
+<h2>Students Enrolled</h2>
+{% if class.students.all %}
+<table border="1">
+	<thead>
+		<tr>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Phone Number</th>
+			<th>Action</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for student in class.students.all %}
+		<tr>
+			<td>{{ student.firstname }}</td>
+			<td>{{ student.lastname }}</td>
+			<td>{{ student.phone}}</td>
+			<td>
+				<a href="{% url 'school:student_detail' pk=student.id %}">Details</a>
+			</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+{% else %}
+<p>No students enrolled in this class.</p>
+{% endif %}
