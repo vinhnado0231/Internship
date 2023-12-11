@@ -14,11 +14,9 @@
     @onStartAgain="statusMatch = 'default'"
   />
   <p class="copyright">
-    This game owned by RHP Team in Vue 3 course for begginers -
-    <a
-      href="https://www.youtube.com/watch?v=CHM75-NqOmk&list=PLU4OBh9yHE94sZ3TPGt0QG_PIwrZ1QF6i"
-      >view here</a
-    >
+    This game clone By Vinh (Game Pokemon memories) using tutorial of
+    toantran.mei(youtuber)-
+    <a href="#">view here for more information</a>
   </p>
 </template>
 
